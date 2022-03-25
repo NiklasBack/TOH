@@ -2,7 +2,7 @@
   <label for="search-box">Hero Search</label>
   <input data-testhooks="heroSearchBox" #searchBox id="search-box" (input)="search(searchBox.value)" />
 
-  <ul class="search-result">
+  <ul class="search-result" data-testhooks="heroSearchResult">
     <li *ngFor="let hero of heroes$ | async" >
       <a [attr.data-testhooks]="'heroSearchList-' + hero.name" routerLink="/detail/{{hero.id}}">
         {{hero.name}}
